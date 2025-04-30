@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\subscriptionplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\subscriptionplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\viewinghistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\viewinghistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\viewinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\viewinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\episode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\episode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\moviegenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviegenre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\subscriptionplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\subscriptionplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\users\\harsh.batra\\onedrive - wolters kluwer\\desktop\\movieproject\\webapplication1\\webapplication1\\migrations\\20250430023518_moviesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20250430023518_moviesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebApplication1.csproj",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1\\WebApplication1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-30T08:33:08.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RatingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\RatingsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\RatingsController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\RatingsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\RatingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:55:49.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubscriptionPlansController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\SubscriptionPlansController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\SubscriptionPlansController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\SubscriptionPlansController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\SubscriptionPlansController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:54:21.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:37:05.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:53:39.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewingHistoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:55:01.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GenresController.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\GenresController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:52:54.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250430023518_moviesdb.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Migrations\\20250430023518_moviesdb.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20250430023518_moviesdb.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Migrations\\20250430023518_moviesdb.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20250430023518_moviesdb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:35:18.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MoviesContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\MoviesContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\MoviesContext.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\MoviesContext.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\MoviesContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:30:28.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Rating.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Rating.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Rating.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:29:46.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ViewingHistory.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\ViewingHistory.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\ViewingHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:29:26.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Episode.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Episode.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Episode.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Episode.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Episode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:29:03.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MovieGenre.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\MovieGenre.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieGenre.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\MovieGenre.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\MovieGenre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:28:30.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Genre.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Genre.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:28:04.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\Movie.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:27:44.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SubscriptionPlan.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\SubscriptionPlan.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\SubscriptionPlan.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\SubscriptionPlan.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\SubscriptionPlan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:27:17.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Harsh.Batra\\OneDrive - Wolters Kluwer\\Desktop\\MOVIEPROJECT\\WebApplication1\\WebApplication1\\Models\\User.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:17:47.767Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
