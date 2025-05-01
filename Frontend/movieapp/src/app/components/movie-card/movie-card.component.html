@@ -1,0 +1,14 @@
+<div class="relative bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition cursor-pointer">
+    <!-- Movie Image -->
+    <img
+      [src]="imageUrl"
+      [alt]="title"
+      class="w-full h-80 object-cover"
+    />
+  
+    <!-- Overlay -->
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-3 py-2">
+      <h3 class="text-sm font-semibold text-white truncate drop-shadow-2xl">{{ title }}</h3>
+    </div>
+  </div>
+  
