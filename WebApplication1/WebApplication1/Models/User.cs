@@ -3,15 +3,10 @@
     public class User
     {
         public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
-
-        public int? SubscriptionPlanId { get; set; }
-        public SubscriptionPlan? SubscriptionPlan { get; set; }
-
-        public ICollection<Rating> Ratings { get; set; } = new List<Rating>();
-        public ICollection<ViewingHistory> ViewingHistories { get; set; } = new List<ViewingHistory>();
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
+        public bool? SubscriptionPlan { get; set; } = null;
     }
 
 }

@@ -10,10 +10,6 @@
         public int MovieId { get; set; }
         public Movie Movie { get; set; } = null!;
 
-        public int? EpisodeId { get; set; }
-        public Episode? Episode { get; set; }
-
-        public DateTime WatchedAt { get; set; } = DateTime.UtcNow;
         public float ProgressPercent { get; set; }
     }
 

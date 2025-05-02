@@ -23,21 +23,24 @@ namespace WebApplication1.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        [HttpPost("login")]
+        public async Task<ActionResult<User>> GetUser(User user)
         {
-            var user = await _context.Users.FindAsync(id);
+            var userFromDb = await _context.Users.FirstOrDefaultAsync(e => e.Email == user.Email);
 
-            if (user == null)
+            if (userFromDb == null)
             {
                 return NotFound();
             }
 
-            return user;
+            if (userFromDb.PasswordHash != user.PasswordHash) 
+            {
+                return Unauthorized();
+            }
+
+            return userFromDb;
         }
 
-        // PUT: api/Users/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {

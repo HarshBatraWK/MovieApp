@@ -22,40 +22,6 @@ namespace WebApplication1.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApplication1.Models.Episode", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EpisodeNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MovieId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("SeasonNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("Episodes");
-                });
-
             modelBuilder.Entity("WebApplication1.Models.Genre", b =>
                 {
                     b.Property<int>("Id")
@@ -64,11 +30,16 @@ namespace WebApplication1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("Genres");
                 });
@@ -88,93 +59,25 @@ namespace WebApplication1.Migrations
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsShow")
+                    b.Property<int>("Episodes")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsMovie")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ThumbnailUrl")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("rating")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.MovieGenre", b =>
-                {
-                    b.Property<int>("MovieId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MovieId", "GenreId");
-
-                    b.HasIndex("GenreId");
-
-                    b.ToTable("MovieGenres");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.Rating", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MovieId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Review")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MovieId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Ratings");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.SubscriptionPlan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("MaxDevices")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Resolution")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SubscriptionPlans");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.User", b =>
@@ -197,12 +100,10 @@ namespace WebApplication1.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SubscriptionPlanId")
-                        .HasColumnType("int");
+                    b.Property<bool?>("SubscriptionPlan")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SubscriptionPlanId");
 
                     b.ToTable("Users");
                 });
@@ -215,9 +116,6 @@ namespace WebApplication1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("EpisodeId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
@@ -227,12 +125,7 @@ namespace WebApplication1.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("WatchedAt")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("EpisodeId");
 
                     b.HasIndex("MovieId");
 
@@ -241,70 +134,15 @@ namespace WebApplication1.Migrations
                     b.ToTable("ViewingHistories");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Episode", b =>
+            modelBuilder.Entity("WebApplication1.Models.Genre", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Movie", "Movie")
-                        .WithMany("Episodes")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.MovieGenre", b =>
-                {
-                    b.HasOne("WebApplication1.Models.Genre", "Genre")
-                        .WithMany("MovieGenres")
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication1.Models.Movie", "Movie")
-                        .WithMany("MovieGenres")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Genre");
-
-                    b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.Rating", b =>
-                {
-                    b.HasOne("WebApplication1.Models.Movie", "Movie")
-                        .WithMany("Ratings")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication1.Models.User", "User")
-                        .WithMany("Ratings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.User", b =>
-                {
-                    b.HasOne("WebApplication1.Models.SubscriptionPlan", "SubscriptionPlan")
-                        .WithMany("Users")
-                        .HasForeignKey("SubscriptionPlanId");
-
-                    b.Navigation("SubscriptionPlan");
+                    b.HasOne("WebApplication1.Models.Movie", null)
+                        .WithMany("Genres")
+                        .HasForeignKey("MovieId");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.ViewingHistory", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Episode", "Episode")
-                        .WithMany()
-                        .HasForeignKey("EpisodeId");
-
                     b.HasOne("WebApplication1.Models.Movie", "Movie")
                         .WithMany()
                         .HasForeignKey("MovieId")
@@ -312,42 +150,19 @@ namespace WebApplication1.Migrations
                         .IsRequired();
 
                     b.HasOne("WebApplication1.Models.User", "User")
-                        .WithMany("ViewingHistories")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Episode");
 
                     b.Navigation("Movie");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Genre", b =>
-                {
-                    b.Navigation("MovieGenres");
-                });
-
             modelBuilder.Entity("WebApplication1.Models.Movie", b =>
                 {
-                    b.Navigation("Episodes");
-
-                    b.Navigation("MovieGenres");
-
-                    b.Navigation("Ratings");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.SubscriptionPlan", b =>
-                {
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("WebApplication1.Models.User", b =>
-                {
-                    b.Navigation("Ratings");
-
-                    b.Navigation("ViewingHistories");
+                    b.Navigation("Genres");
                 });
 #pragma warning restore 612, 618
         }

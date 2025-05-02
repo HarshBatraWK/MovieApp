@@ -70,12 +70,13 @@ namespace WebApplication1.Controllers
         // POST: api/Genres
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Genre>> PostGenre(Genre genre)
+        public async Task<ActionResult<Genre>> PostGenre(string genre)
         {
-            _context.Genres.Add(genre);
+            Genre g = new Genre() { Name=genre};
+            _context.Genres.Add(g);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGenre", new { id = genre.Id }, genre);
+            return CreatedAtAction("GetGenre", new { id = g.Id }, g);
         }
 
         // DELETE: api/Genres/5

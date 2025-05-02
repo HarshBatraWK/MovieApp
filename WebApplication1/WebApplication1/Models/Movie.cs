@@ -7,12 +7,11 @@
         public string Description { get; set; } = null!;
         public DateTime ReleaseDate { get; set; }
         public int Duration { get; set; } // in minutes
-        public bool IsShow { get; set; }
-        public string? ThumbnailUrl { get; set; }
-
-        public ICollection<MovieGenre> MovieGenres { get; set; } = new List<MovieGenre>();
-        public ICollection<Episode> Episodes { get; set; } = new List<Episode>();
-        public ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+        public decimal rating { get; set; }
+        public bool IsMovie { get; set; }
+        public int Episodes { get; set; }
+        public bool subscription { get; set; }
+        public ICollection<Genre> Genres { get; set; } = new List<Genre>();
     }
 
 }
