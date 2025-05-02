@@ -1,0 +1,20 @@
+<div *ngIf="movie" class="movie-detail bg-gray-900 text-white">
+    <div class="trailer">
+        <iframe width="100%" height="800" [src]="getSafeVideoUrl(movie.videoUrl)" title="Interstellar - Trailer - Official Warner Bros. UK" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  
+    <div class="details bg-black p-20 rounded-2xl flex gap-4">
+        <div>
+        <img [src]="movie.imgUrl" alt="{{ movie.title }}" width="300"></div>
+        <div>
+      <h1 class="mb-4 text-red-600 font-bold text-3xl">{{ movie.title }}</h1>
+      <p ><strong>Description:</strong> {{movie.description}}</p>
+  
+      <div>
+        <strong>Rating: </strong>
+        <span class="text-amber-300 text-2xl">{{getStarRating(movie.rating)}}</span>
+      </div>
+    </div>
+    </div>
+  </div>
+  

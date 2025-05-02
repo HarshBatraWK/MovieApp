@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovieCardComponent } from '../../components/movie-card/movie-card.component';
 import { RouterModule } from '@angular/router';
+import { MoviesectionComponent } from './moviesection/moviesection.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MovieCardComponent, RouterModule],
+  imports: [CommonModule, RouterModule, MoviesectionComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
