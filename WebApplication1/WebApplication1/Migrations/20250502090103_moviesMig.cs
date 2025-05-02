@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebApplication1.Migrations
 {
     /// <inheritdoc />
-    public partial class movie : Migration
+    public partial class moviesMig : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,8 @@ namespace WebApplication1.Migrations
                     Duration = table.Column<int>(type: "int", nullable: false),
                     rating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsMovie = table.Column<bool>(type: "bit", nullable: false),
-                    Episodes = table.Column<int>(type: "int", nullable: false)
+                    Episodes = table.Column<int>(type: "int", nullable: false),
+                    subscription = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -53,7 +54,7 @@ namespace WebApplication1.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MovieId = table.Column<int>(type: "int", nullable: true)
+                    MovieId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,7 +63,8 @@ namespace WebApplication1.Migrations
                         name: "FK_Genres_Movies_MovieId",
                         column: x => x.MovieId,
                         principalTable: "Movies",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

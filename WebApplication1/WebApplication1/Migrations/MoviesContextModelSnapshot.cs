@@ -30,7 +30,7 @@ namespace WebApplication1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("MovieId")
+                    b.Property<int>("MovieId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -74,6 +74,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<decimal>("rating")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("subscription")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -136,9 +139,13 @@ namespace WebApplication1.Migrations
 
             modelBuilder.Entity("WebApplication1.Models.Genre", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Movie", null)
+                    b.HasOne("WebApplication1.Models.Movie", "Movie")
                         .WithMany("Genres")
-                        .HasForeignKey("MovieId");
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.ViewingHistory", b =>

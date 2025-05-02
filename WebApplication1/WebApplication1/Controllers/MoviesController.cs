@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Humanizer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -67,16 +68,45 @@ namespace WebApplication1.Controllers
             return NoContent();
         }
 
-        // POST: api/Movies
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPost]
-        public async Task<ActionResult<Movie>> PostMovie(Movie movie)
+        public async Task<ActionResult<MovieDto>> PostMovie(MovieDto dto)
         {
+            // Create movie entity
+            var movie = new Movie
+            {
+                Title = dto.Title,
+                Description = dto.Description,
+                ReleaseDate = dto.ReleaseDate,
+                Duration = dto.Duration,
+                rating = dto.rating,
+                IsMovie = dto.IsMovie,
+                Episodes = dto.Episodes,
+                subscription = dto.subscription,
+                Genres = dto.Genres.Select(g => new Genre { Name = g }).ToList()
+            };
+
             _context.Movies.Add(movie);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMovie", new { id = movie.Id }, movie);
+            // Map result to a read DTO to avoid circular serialization
+            var result = new MovieDto
+            {
+                Id = movie.Id,
+                Title = movie.Title,
+                Description = movie.Description,
+                ReleaseDate = movie.ReleaseDate,
+                Duration = movie.Duration,
+                rating = movie.rating,
+                IsMovie = movie.IsMovie,
+                Episodes = movie.Episodes,
+                subscription = movie.subscription,
+                Genres = movie.Genres.Select(g => g.Name).ToList()
+            };
+
+            return CreatedAtAction(nameof(GetMovie), new { id = movie.Id }, result);
         }
+
 
         // DELETE: api/Movies/5
         [HttpDelete("{id}")]
@@ -103,7 +133,7 @@ namespace WebApplication1.Controllers
         [HttpGet("stream/{name}")]
         public async Task<IActionResult> GetVideo(string name)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data", name+".mp4");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/video", name+".mp4");
 
             if (!System.IO.File.Exists(filePath))
                 return NotFound();
@@ -135,6 +165,22 @@ namespace WebApplication1.Controllers
             }
 
             return File(stream, "video/mp4", enableRangeProcessing: true);
+        }
+
+
+
+        [HttpGet("image/{name}")]
+        public async Task<IActionResult> GetImage(string name)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/image", name + ".jpg");
+
+            if (!System.IO.File.Exists(filePath))
+                return NotFound();
+
+            var fileInfo = new FileInfo(filePath);
+            var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            return File(stream, "image/jpg", enableRangeProcessing: true);
         }
     }
 }

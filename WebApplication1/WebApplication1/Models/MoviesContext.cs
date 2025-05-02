@@ -17,5 +17,15 @@ namespace WebApplication1.Models
                 optionsBuilder.UseSqlServer("Server=IN83TAAL072K73\\SQLEXPRESS;Database=moviesdb;Trusted_Connection=true;TrustServerCertificate=True;");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Genre>()
+                .HasOne(g => g.Movie)
+                .WithMany(m => m.Genres)
+                .HasForeignKey(g => g.MovieId)
+                .OnDelete(DeleteBehavior.Cascade); // Optional: delete genres if movie is deleted
+        }
+
     }
 }
