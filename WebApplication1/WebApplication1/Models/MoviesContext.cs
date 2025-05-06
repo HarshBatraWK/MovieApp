@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication1.Models;
 
-namespace WebApplication1.Models
+namespace WebApplication1.Models.Movie
 {
     public class MoviesContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Movies> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<ViewingHistory> ViewingHistories { get; set; }
+        public DbSet<UserRating> UserRatings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,6 +25,14 @@ namespace WebApplication1.Models
                 .WithMany(m => m.Genres)
                 .HasForeignKey(g => g.MovieId)
                 .OnDelete(DeleteBehavior.Cascade); // Optional: delete genres if movie is deleted
+
+            modelBuilder.Entity<Movies>()
+                .HasOne<ViewingHistory>(m => m.ViewingHistory)
+                .WithOne(vh => vh.Movie)
+                .HasForeignKey<ViewingHistory>(vh => vh.MovieId);
+
+            modelBuilder.Entity<UserRating>()
+                .HasKey(ur => new { ur.UserId, ur.MovieId });
         }
 
     }

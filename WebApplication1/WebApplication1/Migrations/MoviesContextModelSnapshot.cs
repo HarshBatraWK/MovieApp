@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication1.Models;
+using WebApplication1.Models.Movie;
 
 #nullable disable
 
@@ -22,7 +22,7 @@ namespace WebApplication1.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebApplication1.Models.Genre", b =>
+            modelBuilder.Entity("WebApplication1.Models.Movie.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -44,7 +44,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Movie", b =>
+            modelBuilder.Entity("WebApplication1.Models.Movie.Movies", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -83,6 +83,24 @@ namespace WebApplication1.Migrations
                     b.ToTable("Movies");
                 });
 
+            modelBuilder.Entity("WebApplication1.Models.Movie.ViewingHistory", b =>
+                {
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("ProgressPercent")
+                        .HasColumnType("real");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MovieId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ViewingHistories");
+                });
+
             modelBuilder.Entity("WebApplication1.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -111,35 +129,27 @@ namespace WebApplication1.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.ViewingHistory", b =>
+            modelBuilder.Entity("WebApplication1.Models.UserRating", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.Property<float>("ProgressPercent")
-                        .HasColumnType("real");
-
-                    b.Property<int>("UserId")
+                    b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "MovieId");
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("ViewingHistories");
+                    b.ToTable("UserRatings");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Genre", b =>
+            modelBuilder.Entity("WebApplication1.Models.Movie.Genre", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Movie", "Movie")
+                    b.HasOne("WebApplication1.Models.Movie.Movies", "Movie")
                         .WithMany("Genres")
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -148,9 +158,28 @@ namespace WebApplication1.Migrations
                     b.Navigation("Movie");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.ViewingHistory", b =>
+            modelBuilder.Entity("WebApplication1.Models.Movie.ViewingHistory", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Movie", "Movie")
+                    b.HasOne("WebApplication1.Models.Movie.Movies", "Movie")
+                        .WithOne("ViewingHistory")
+                        .HasForeignKey("WebApplication1.Models.Movie.ViewingHistory", "MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebApplication1.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.UserRating", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Movie.Movies", "Movie")
                         .WithMany()
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -167,9 +196,11 @@ namespace WebApplication1.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Movie", b =>
+            modelBuilder.Entity("WebApplication1.Models.Movie.Movies", b =>
                 {
                     b.Navigation("Genres");
+
+                    b.Navigation("ViewingHistory");
                 });
 #pragma warning restore 612, 618
         }

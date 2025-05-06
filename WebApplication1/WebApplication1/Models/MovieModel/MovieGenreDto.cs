@@ -1,6 +1,6 @@
-﻿namespace WebApplication1.Models
+﻿namespace WebApplication1.Models.Movie
 {
-    public class Movie
+    public class MovieGenreDto
     {
         public int Id { get; set; }
         public string Title { get; set; } = null!;
@@ -11,7 +11,5 @@
         public bool IsMovie { get; set; }
         public int Episodes { get; set; }
         public bool subscription { get; set; }
-        public ICollection<Genre> Genres { get; set; } = new List<Genre>();
     }
-
 }

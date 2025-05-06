@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
+using WebApplication1.Models.Movie;
 
 namespace WebApplication1.Controllers
 {
@@ -18,14 +19,14 @@ namespace WebApplication1.Controllers
 
         // GET: api/Movies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<Movies>>> GetMovies()
         {
             return await _context.Movies.ToListAsync();
         }
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Movie>> GetMovie(int id)
+        public async Task<ActionResult<Movies>> GetMovie(int id)
         {
             var movie = await _context.Movies.FindAsync(id);
 
@@ -37,10 +38,44 @@ namespace WebApplication1.Controllers
             return movie;
         }
 
+        [HttpGet("byGenre/{genre}")]
+        public async Task<ActionResult<IEnumerable<MovieGenreDto>>> GetMoviesByGenre(string genre)
+        {
+            string sqlQuery = @"SELECT m.Id, m.Title, m.Description, m.ReleaseDate, m.Duration, 
+                            m.Rating, m.IsMovie, m.Episodes, m.Subscription
+                            FROM 
+                                Movies m
+                            JOIN 
+                                Genres g ON m.Id = g.MovieId
+                            WHERE 
+                                g.Name = {0}";
+
+            List<MovieGenreDto> movieList = await _context.Database
+                .SqlQueryRaw<MovieGenreDto>(sqlQuery, genre)
+                .ToListAsync();
+
+            return Ok(movieList);
+        }
+
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<Movies>>> SearchMovies(string name, int userId, int rating, int duration)
+        {
+            var User = await _context.Users.FindAsync(userId);
+
+            var movies = await _context.Movies
+                .Where(m => m.Title.ToLower().Contains(name.ToLower()))
+                .Where(m => m.subscription == User.SubscriptionPlan || m.subscription==false)
+                .Where(m => m.rating >= rating)
+                .Where(m => m.Duration >= duration)
+                .ToListAsync();
+
+            return Ok(movies);
+        }
+
         // PUT: api/Movies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovie(int id, Movie movie)
+        public async Task<IActionResult> PutMovie(int id, Movies movie)
         {
             if (id != movie.Id)
             {
@@ -73,7 +108,7 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult<MovieDto>> PostMovie(MovieDto dto)
         {
             // Create movie entity
-            var movie = new Movie
+            var movie = new Movies
             {
                 Title = dto.Title,
                 Description = dto.Description,

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebApplication1.Migrations
 {
     /// <inheritdoc />
-    public partial class moviesMig : Migration
+    public partial class movie : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -68,18 +68,41 @@ namespace WebApplication1.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ViewingHistories",
+                name: "UserRatings",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     MovieId = table.Column<int>(type: "int", nullable: false),
-                    ProgressPercent = table.Column<float>(type: "real", nullable: false)
+                    Rating = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ViewingHistories", x => x.Id);
+                    table.PrimaryKey("PK_UserRatings", x => new { x.UserId, x.MovieId });
+                    table.ForeignKey(
+                        name: "FK_UserRatings_Movies_MovieId",
+                        column: x => x.MovieId,
+                        principalTable: "Movies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserRatings_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ViewingHistories",
+                columns: table => new
+                {
+                    MovieId = table.Column<int>(type: "int", nullable: false),
+                    ProgressPercent = table.Column<float>(type: "real", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ViewingHistories", x => x.MovieId);
                     table.ForeignKey(
                         name: "FK_ViewingHistories_Movies_MovieId",
                         column: x => x.MovieId,
@@ -100,8 +123,8 @@ namespace WebApplication1.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ViewingHistories_MovieId",
-                table: "ViewingHistories",
+                name: "IX_UserRatings_MovieId",
+                table: "UserRatings",
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
@@ -115,6 +138,9 @@ namespace WebApplication1.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Genres");
+
+            migrationBuilder.DropTable(
+                name: "UserRatings");
 
             migrationBuilder.DropTable(
                 name: "ViewingHistories");

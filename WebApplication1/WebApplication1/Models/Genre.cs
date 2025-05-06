@@ -1,13 +1,10 @@
-﻿namespace WebApplication1.Models
+﻿namespace WebApplication1.Models.Movie;
+public class Genre
 {
-    public class Genre
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
+    public int Id { get; set; }
+    public string Name { get; set; } = null!;
 
-        public int MovieId { get; set; }
+    public int MovieId { get; set; }
 
-        public Movie Movie { get; set; }
-    }
-
+    public Movies Movie { get; set; }
 }
