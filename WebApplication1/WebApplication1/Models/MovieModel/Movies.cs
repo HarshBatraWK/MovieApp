@@ -11,6 +11,8 @@
         public bool IsMovie { get; set; }
         public int Episodes { get; set; }
         public bool subscription { get; set; }
+        public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
         public ICollection<Genre> Genres { get; set; } = new List<Genre>();
         public ViewingHistory? ViewingHistory { get; set; }
 

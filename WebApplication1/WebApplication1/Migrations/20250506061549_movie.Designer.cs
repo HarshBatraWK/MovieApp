@@ -12,7 +12,7 @@ using WebApplication1.Models.Movie;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(MoviesContext))]
-    [Migration("20250506060231_movie")]
+    [Migration("20250506061549_movie")]
     partial class movie
     {
         /// <inheritdoc />
@@ -65,6 +65,10 @@ namespace WebApplication1.Migrations
                     b.Property<int>("Episodes")
                         .HasColumnType("int");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsMovie")
                         .HasColumnType("bit");
 
@@ -72,6 +76,10 @@ namespace WebApplication1.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VideoUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

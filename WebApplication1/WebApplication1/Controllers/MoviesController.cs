@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Humanizer;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
 using WebApplication1.Models.Movie;
@@ -54,6 +48,21 @@ namespace WebApplication1.Controllers
                 .SqlQueryRaw<MovieGenreDto>(sqlQuery, genre)
                 .ToListAsync();
 
+            //var result = from m in _context.Movies
+            //             join g in _context.Genres on m.Id equals g.MovieId
+            //             where g.Name == genre  // genreName is the parameter for the genre name you're filtering by
+            //             select new
+            //             {
+            //                 m.Id,
+            //                 m.Title,
+            //                 m.Description,
+            //                 m.ReleaseDate,
+            //                 m.Duration,
+            //                 m.IsMovie,
+            //                 m.Episodes
+            //             };
+
+            //var movieList = await result.ToListAsync();
             return Ok(movieList);
         }
 
@@ -75,12 +84,28 @@ namespace WebApplication1.Controllers
         // PUT: api/Movies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovie(int id, Movies movie)
+        public async Task<IActionResult> PutMovie(int id, MovieDto dto)
         {
-            if (id != movie.Id)
+            if (id != dto.Id)
             {
                 return BadRequest();
             }
+
+            var movie = new Movies
+            {
+                Id = id,
+                Title = dto.Title,
+                Description = dto.Description,
+                ReleaseDate = dto.ReleaseDate,
+                Duration = dto.Duration,
+                rating = dto.rating,
+                IsMovie = dto.IsMovie,
+                Episodes = dto.Episodes,
+                subscription = dto.subscription,
+                ImageUrl = dto.ImageUrl,
+                VideoUrl = dto.VideoUrl,
+                Genres = dto.Genres.Select(g => new Genre { Name = g }).ToList()
+            };
 
             _context.Entry(movie).State = EntityState.Modified;
 
@@ -118,6 +143,8 @@ namespace WebApplication1.Controllers
                 IsMovie = dto.IsMovie,
                 Episodes = dto.Episodes,
                 subscription = dto.subscription,
+                ImageUrl = dto.ImageUrl,
+                VideoUrl = dto.VideoUrl,
                 Genres = dto.Genres.Select(g => new Genre { Name = g }).ToList()
             };
 
@@ -164,11 +191,10 @@ namespace WebApplication1.Controllers
             return _context.Movies.Any(e => e.Id == id);
         }
 
-
-        [HttpGet("stream/{name}")]
+        [HttpGet("video/{name}")]
         public async Task<IActionResult> GetVideo(string name)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/video", name+".mp4");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/video", name);
 
             if (!System.IO.File.Exists(filePath))
                 return NotFound();
@@ -203,11 +229,10 @@ namespace WebApplication1.Controllers
         }
 
 
-
         [HttpGet("image/{name}")]
         public async Task<IActionResult> GetImage(string name)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/image", name + ".jpg");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "data/image", name);
 
             if (!System.IO.File.Exists(filePath))
                 return NotFound();
@@ -216,6 +241,33 @@ namespace WebApplication1.Controllers
             var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
 
             return File(stream, "image/jpg", enableRangeProcessing: true);
+        }
+
+
+        [HttpPost("uploadData")]
+        public async Task<IActionResult> UploadImage(IFormFile file,[FromForm] bool isImage)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file selected.");
+
+            string dataPath = isImage ? "image" : "video";
+
+            string uploadsFolder = Path.Combine($"C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\data\\{dataPath}\\");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+
+            string dataUrl = $"http://localhost:5199/api/Movies/{dataPath}/{uniqueFileName}";
+            return Ok(new { Url = dataUrl });
         }
     }
 }

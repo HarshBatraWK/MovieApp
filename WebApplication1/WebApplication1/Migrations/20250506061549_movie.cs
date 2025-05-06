@@ -24,7 +24,9 @@ namespace WebApplication1.Migrations
                     rating = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsMovie = table.Column<bool>(type: "bit", nullable: false),
                     Episodes = table.Column<int>(type: "int", nullable: false),
-                    subscription = table.Column<bool>(type: "bit", nullable: false)
+                    subscription = table.Column<bool>(type: "bit", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VideoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

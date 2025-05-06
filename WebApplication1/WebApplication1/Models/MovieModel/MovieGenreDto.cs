@@ -10,6 +10,8 @@
         public decimal rating { get; set; }
         public bool IsMovie { get; set; }
         public int Episodes { get; set; }
+        public string ImageUrl { get; set; }
+        public string VideoUrl { get; set; }
         public bool subscription { get; set; }
     }
 }
