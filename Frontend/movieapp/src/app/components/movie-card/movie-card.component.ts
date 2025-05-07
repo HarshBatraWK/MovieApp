@@ -10,10 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent {
+  @Input() id: number = 0;
   @Input() title: string = '';
   @Input() imgUrl: string = '';  
   
   get movieroute(): string {
-    return "/movie/" + this.title;
+    return "/movie/" + this.id;
   }
 }

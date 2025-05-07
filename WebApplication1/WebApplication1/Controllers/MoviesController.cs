@@ -162,6 +162,8 @@ namespace WebApplication1.Controllers
                 rating = movie.rating,
                 IsMovie = movie.IsMovie,
                 Episodes = movie.Episodes,
+                ImageUrl = movie.ImageUrl,
+                VideoUrl= movie.VideoUrl,
                 subscription = movie.subscription,
                 Genres = movie.Genres.Select(g => g.Name).ToList()
             };

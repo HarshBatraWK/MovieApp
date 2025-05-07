@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Movie } from '../model/Movie';
+import { Observable } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
 
-  constructor() { }
+  private baseUrl: string = "http://localhost:5199/api/Movies/"; // <-- Update this as needed
+
+  constructor(private http: HttpClient) {}
 
   private movies = [
     {
@@ -74,7 +81,11 @@ export class MoviesService {
     return this.movies;
   }
 
-  getMovies() {
-    return this.movies;
+  getMovies() : Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.baseUrl}`);
+  }
+
+  getMoviesById(id: number) : Observable<Movie> {
+    return this.http.get<Movie>(`${this.baseUrl + id}`);
   }
 }
