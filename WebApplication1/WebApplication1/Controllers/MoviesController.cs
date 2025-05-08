@@ -257,7 +257,8 @@ namespace WebApplication1.Controllers
 
             string dataPath = isImage ? "image" : "video";
 
-            string uploadsFolder = Path.Combine($"C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\data\\{dataPath}\\");
+            //string uploadsFolder = Path.Combine($"C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\data\\{dataPath}\\");
+            string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "data/" + dataPath);
             if (!Directory.Exists(uploadsFolder))
             {
                 Directory.CreateDirectory(uploadsFolder);
