@@ -1,0 +1,95 @@
+<div class="min-h-screen flex justify-center items-center bg-gray-900 text-white">
+    <div class="w-full max-w-md p-8 bg-black bg-opacity-60 rounded-lg shadow-lg">
+      <div class="text-center text-3xl font-bold mb-6">
+        Sign Up
+      </div>
+
+      <div *ngIf="errorMessage" class="text-red-500 text-center mb-4">
+        {{ errorMessage }}
+      </div>
+
+  
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-6">
+  
+        <!-- Full Name -->
+        <div>
+          <label for="fullName" class="block text-sm">Full Name</label>
+          <input
+            id="fullName"
+            type="text"
+            formControlName="fullName"
+            class="w-full p-3 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-red-600"
+            placeholder="Your name"
+          />
+          <div *ngIf="fullName?.invalid && fullName?.touched" class="text-red-500 text-sm mt-1">
+            <div *ngIf="fullName?.hasError('required')">Name is required</div>
+            <div *ngIf="fullName?.hasError('minlength')">Name must be at least 2 characters</div>
+          </div>
+        </div>
+  
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm">Email</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            class="w-full p-3 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-red-600"
+            placeholder="you@example.com"
+          />
+          <div *ngIf="email?.invalid && email?.touched" class="text-red-500 text-sm mt-1">
+            <div *ngIf="email?.hasError('required')">Email is required</div>
+            <div *ngIf="email?.hasError('email')">Enter a valid email</div>
+          </div>
+        </div>
+  
+        <!-- Password -->
+        <div>
+          <label for="password" class="block text-sm">Password</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            class="w-full p-3 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-red-600"
+            placeholder="Create a password"
+          />
+          <div *ngIf="password?.invalid && password?.touched" class="text-red-500 text-sm mt-1">
+            <div *ngIf="password?.hasError('required')">Password is required</div>
+            <div *ngIf="password?.hasError('minlength')">Min 8 characters</div>
+          </div>
+        </div>
+  
+        <!-- Confirm Password -->
+        <div>
+          <label for="confirmPassword" class="block text-sm">Confirm Password</label>
+          <input
+            id="confirmPassword"
+            type="password"
+            formControlName="confirmPassword"
+            class="w-full p-3 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-red-600"
+            placeholder="Confirm your password"
+          />
+          <div *ngIf="(confirmPassword?.invalid || signupForm.hasError('mismatch')) && confirmPassword?.touched" class="text-red-500 text-sm mt-1">
+            <div *ngIf="confirmPassword?.hasError('required')">Confirmation is required</div>
+            <div *ngIf="signupForm.hasError('mismatch')">Passwords do not match</div>
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 disabled:bg-gray-600"
+          [disabled]="signupForm.invalid"
+        >
+          Sign Up
+        </button>
+  
+        <!-- Link to Login -->
+        <div class="mt-4 text-center">
+          <span class="text-sm">Already have an account? </span>
+          <a routerLink="/login" class="text-red-600 hover:underline">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  

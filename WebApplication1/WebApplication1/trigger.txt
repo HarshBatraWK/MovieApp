@@ -1,0 +1,31 @@
+﻿CREATE TRIGGER trg_UpdateMovieAverageRating
+ON UserRatings
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Handle inserted and deleted rows to get affected MovieIds
+    DECLARE @MovieIds TABLE (MovieId INT);
+
+    -- Insert MovieIds from inserted (for INSERT/UPDATE)
+    INSERT INTO @MovieIds (MovieId)
+    SELECT DISTINCT MovieId FROM inserted;
+
+    -- Insert MovieIds from deleted (for DELETE/UPDATE)
+    INSERT INTO @MovieIds (MovieId)
+    SELECT DISTINCT MovieId FROM deleted;
+
+    -- Remove duplicates
+    ;WITH DistinctMovieIds AS (
+        SELECT DISTINCT MovieId FROM @MovieIds
+    )
+    UPDATE Movies
+    SET Rating = ISNULL((
+        SELECT AVG(CAST(Rating AS FLOAT))
+        FROM UserRatings
+        WHERE UserRatings.MovieId = Movies.Id
+    ), 0)
+    FROM Movies
+    INNER JOIN DistinctMovieIds ON Movies.Id = DistinctMovieIds.MovieId;
+END
