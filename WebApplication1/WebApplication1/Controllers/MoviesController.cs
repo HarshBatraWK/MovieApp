@@ -36,7 +36,7 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult<IEnumerable<MovieGenreDto>>> GetMoviesByGenre(string genre)
         {
             string sqlQuery = @"SELECT m.Id, m.Title, m.Description, m.ReleaseDate, m.Duration, 
-                            m.Rating, m.IsMovie, m.Episodes, m.Subscription
+                            m.Rating, m.IsMovie, m.Episodes, m.Subscription, m.ImageUrl, m.VideoUrl
                             FROM 
                                 Movies m
                             JOIN 
