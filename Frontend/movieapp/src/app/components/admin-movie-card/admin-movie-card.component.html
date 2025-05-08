@@ -1,0 +1,17 @@
+<div class="movie-card">
+    <img [src]="movie.imageUrl" alt="{{ movie.title }}" class="movie-image">
+  
+    <div class="movie-info">
+      <h3 class="movie-title">{{ movie.title }}</h3>
+      <p class="movie-description">
+        {{ movie.description | slice:0:25 }}{{ movie.description.length > 25 ? '...' : '' }}
+      </p>
+      <p class="movie-runtime">Runtime: {{ movie.duration }} min</p>
+  
+      <div class="movie-actions">
+        <button class="btn update-btn" (click)="onUpdate(movie.id)">Update</button>
+        <button class="btn delete-btn" (click)="onDelete(movie.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  

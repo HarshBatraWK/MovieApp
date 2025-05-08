@@ -1,0 +1,31 @@
+<!-- Top Navbar -->
+<nav class="admin-navbar">
+    <div class="navbar-left">Admin</div>
+    <div class="navbar-right">
+      <button class="nav-btn" routerLink="addmovie">Add Movies</button>
+      <!-- <button class="nav-btn delete">Delete Movies</button> -->
+    </div>
+  </nav>
+  
+  <!-- Main Content Sections -->
+  <!-- <div class="admin-section">
+    <h2>Users</h2>
+    <div class="card-row">
+      <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+    </div>
+  </div> -->
+  
+  <div class="admin-section">
+    <h2>Movies</h2>
+    <div class="card-row">
+      <app-admin-movie-card *ngFor="let movie of movies" [movie]="movie" ></app-admin-movie-card>
+    </div>
+  </div>
+  
+  <div class="admin-section">
+    <h2>Web Series</h2>
+    <div class="card-row">
+        <app-admin-movie-card *ngFor="let movie of movies" [movie]="movie" ></app-admin-movie-card>
+    </div>
+  </div>
+  
