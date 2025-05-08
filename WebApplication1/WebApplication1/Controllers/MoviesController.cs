@@ -15,7 +15,10 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movies>>> GetMovies()
         {
-            return await _context.Movies.ToListAsync();
+            return await _context.Movies
+                .Include(m => m.Genres)
+                .Include(m => m.ViewingHistory)
+                .ToListAsync();
         }
 
         // GET: api/Movies/5
@@ -246,8 +249,8 @@ namespace WebApplication1.Controllers
         }
 
 
-        [HttpPost("uploadData")]
-        public async Task<IActionResult> UploadImage(IFormFile file,[FromForm] bool isImage)
+        [HttpPost("uploadData+/{isImage}")]
+        public async Task<IActionResult> UploadImage(IFormFile file, bool isImage)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("No file selected.");

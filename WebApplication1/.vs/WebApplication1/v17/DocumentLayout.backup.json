@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\movie app\\MovieApp\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\userratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\userratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +21,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\moviemodel\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviemodel\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\viewinghistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,10 +46,6 @@
       "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\userrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\controllers\\userratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\userratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\moviemodel\\moviegenredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviemodel\\moviegenredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -42,16 +54,8 @@
       "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviemodel\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\moviemodel\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\moviemodel\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\viewinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\viewinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91F8A46B-D551-421C-8F56-C847D1BA2EE0}|WebApplication1\\WebApplication1.csproj|c:\\movie app\\movieapp\\webapplication1\\webapplication1\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,60 +83,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T07:24:30.641Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GenresController.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GenresController.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs*",
-              "RelativeToolTip": "WebApplication1\\Controllers\\GenresController.cs*",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBAAAABBAAAAAAAAAA==",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswH8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T03:52:54.629Z",
+              "WhenOpened": "2025-05-08T20:15:31.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ViewingHistoriesController.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAkwCkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:38:43.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\MoviesController.cs",
               "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAwwCoAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T02:37:05.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "UserRating.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\UserRating.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\UserRating.cs",
@@ -144,100 +124,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MoviesContext.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MoviesContext.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\MoviesContext.cs",
               "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MoviesContext.cs",
               "RelativeToolTip": "WebApplication1\\Models\\MoviesContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAswBAAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T09:29:12.105Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "dbo.Users.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/IN83TAAL072K4M_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/IN83TAAL072K4M_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Users.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-08T14:23:12.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRatingsController.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UserRatingsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UserRatingsController.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UserRatingsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\UserRatingsController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T05:53:18.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\UserDto.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\UserDto.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\UserDto.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\UserDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBQAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T05:41:55.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Movies.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\Movies.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieModel\\Movies.cs",
               "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\Movies.cs",
               "RelativeToolTip": "WebApplication1\\Models\\MovieModel\\Movies.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAkwA4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T02:27:44.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MovieDto.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieDto.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieModel\\MovieDto.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieDto.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\MovieModel\\MovieDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T09:08:21.253Z"
+              "WhenOpened": "2025-05-06T07:24:30.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MovieGenreDto.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:37:11.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ViewingHistory.cs",
-              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\ViewingHistory.cs",
-              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\ViewingHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T02:29:26.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\User.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\User.cs",
@@ -249,7 +172,100 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRatingsController.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UserRatingsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\UserRatingsController.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\UserRatingsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\UserRatingsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T05:53:18.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ViewingHistoriesController.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ViewingHistoriesController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAkwCkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T16:38:43.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GenresController.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\GenresController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAIwAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T03:52:54.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/IN83TAAL072K4M_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/IN83TAAL072K4M_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-08T14:23:12.45Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\UserDto.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\UserDto.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\UserDto.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\UserDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T05:41:55.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MovieDto.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieDto.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieModel\\MovieDto.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieDto.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\MovieModel\\MovieDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:08:21.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovieGenreDto.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\MovieModel\\MovieGenreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T08:37:11.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewingHistory.cs",
+              "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\ViewingHistory.cs",
+              "ToolTip": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\ViewingHistory.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\ViewingHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T02:29:26.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "dbo.ViewingHistories.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/IN83TAAL072K73_SQLEXPRESS/moviesdb/True/SqlTable/dbo.ViewingHistories.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/IN83TAAL072K73_SQLEXPRESS/moviesdb/True/SqlTable/dbo.ViewingHistories.sql",
@@ -258,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Genre.cs",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\Models\\Genre.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\Genre.cs",
@@ -270,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "dbo.Genres.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/IN83TAAL072K73_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Genres.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/IN83TAAL072K73_SQLEXPRESS/moviesdb/True/SqlTable/dbo.Genres.sql",
@@ -279,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "WebApplication1.csproj",
               "DocumentMoniker": "C:\\movie app\\MovieApp\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
               "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
