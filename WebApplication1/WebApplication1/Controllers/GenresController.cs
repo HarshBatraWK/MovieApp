@@ -20,7 +20,12 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Genre>>> GetGenres()
         {
-            return await _context.Genres.ToListAsync();
+            var uniqueGenres = await _context.Genres
+                .Select(g => g.Name)          // Select only the genre name
+                .Distinct()                   // Ensure uniqueness
+                .ToListAsync();
+
+            return Ok(uniqueGenres);
         }
 
         // GET: api/Genres/distinct
