@@ -1,0 +1,28 @@
+<!-- Hero Section -->
+<div class="relative bg-gray-900 text-white">
+    <img
+      src="assets/bg.jpg"
+      alt="Hero Background"
+      class="w-full h-[80vh] object-cover opacity-40 bg-black"
+    />
+  
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-5xl sm:text-6xl font-bold mb-4">Welcome to <span class="text-red-600 drop-shadow-2xl">MovieFlix</span></h1>
+      <p class="text-lg sm:text-xl mb-6 max-w-xl text-gray-400">
+        Stream your favorite movies and shows. Anytime. Anywhere.
+      </p>
+      <a
+        routerLink="/signup"
+        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+  
+  <app-moviesection title="Trending Now" />
+  <app-moviesection title="Continue Watching" />
+  <app-moviesection title="Horror" />
+  <app-moviesection title="Romance" />
+  <app-moviesection title="Thriller" />
+  
