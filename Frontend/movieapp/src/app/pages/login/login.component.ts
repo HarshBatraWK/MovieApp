@@ -2,7 +2,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,10 @@ import { RouterModule } from '@angular/router';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  errorMessage: string | null = null;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder, private loginService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
       email: [
         '', 
@@ -22,7 +25,7 @@ export class LoginComponent {
       ],
       password: [
         '', 
-        [Validators.required, Validators.minLength(8), Validators.pattern('^(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]+$')]
+        [Validators.required, Validators.minLength(8)]
       ]
     });
   }
@@ -39,9 +42,18 @@ export class LoginComponent {
   // Submit the form
   onSubmit() {
     if (this.loginForm.valid) {
-      console.log('Form Submitted', this.loginForm.value);
+      this.loginService.login(this.loginForm.value).subscribe({
+        next: (token: string) => {
+          localStorage.setItem('jwt_token', token);
+          this.router.navigate(['/']);
+        },
+        error: (err) => {
+          console.error('Login failed', err);
+          this.errorMessage = 'Invalid email or password.';
+        }
+      });
     } else {
-      console.log('Form is invalid');
+      this.errorMessage = 'Please fix the errors in the form.';
     }
   }
 }

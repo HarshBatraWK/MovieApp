@@ -3,7 +3,7 @@ import { MoviesService } from '../../../services/movies.service';
 import { MovieCardComponent } from '../../../components/movie-card/movie-card.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Movie } from '../../../model/Movie';
+import { Movie } from '../../../models/Movie';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { Movie } from '../../../model/Movie';
   styleUrl: './moviesection.component.css'
 })
 export class MoviesectionComponent implements OnInit {
-  @Input() title: string = "";
+  @Input() genre: string = "";
 
   movies: Movie []= [];
   
@@ -21,7 +21,8 @@ export class MoviesectionComponent implements OnInit {
   
       ngOnInit(): void {
         this._moviesservice.getMovies().subscribe(data => {
-          this.movies = data;
+        // this._moviesservice.getMoviesByGenre(this.genre).subscribe(data => {
+            this.movies = data;
           console.log(this.movies);
         });        
       }

@@ -2,7 +2,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,16 +14,13 @@ import { RouterModule } from '@angular/router';
 })
 export class SignupComponent {
   signupForm: FormGroup;
+  errorMessage: string | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.signupForm = this.fb.group({
       fullName: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [
-        Validators.required,
-        Validators.minLength(8),
-        Validators.pattern('^(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]+$')
-      ]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', Validators.required]
     }, { validators: this.passwordMatchValidator });
   }
@@ -40,8 +38,18 @@ export class SignupComponent {
 
   onSubmit() {
     if (this.signupForm.valid) {
-      console.log('Signup data:', this.signupForm.value);
-      // handle signup logic
+      const { fullName, email, password } = this.signupForm.value;
+      const payload = { name: fullName, email, password };
+
+      this.authService.signup(payload).subscribe({
+        next: () => {
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.error('Signup failed', err);
+          this.errorMessage = 'Signup failed. Try a different email.';
+        }
+      });
     } else {
       this.signupForm.markAllAsTouched();
     }

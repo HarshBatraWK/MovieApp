@@ -5,6 +5,11 @@
       <div class="text-center text-3xl font-bold mb-6">
         Login
       </div>
+
+      <div *ngIf="errorMessage" class="text-red-500 text-center mb-4">
+        {{ errorMessage }}
+      </div>
+
   
       <!-- Login Form -->
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-6">
@@ -38,7 +43,6 @@
           <div *ngIf="password?.invalid && password?.touched" class="text-red-500 text-sm mt-2">
             <div *ngIf="password?.hasError('required')">Password is required</div>
             <div *ngIf="password?.hasError('minlength')">Password must be at least 8 characters</div>
-            <div *ngIf="password?.hasError('pattern')">Password must contain at least one uppercase letter and one number</div>
           </div>
         </div>
   
