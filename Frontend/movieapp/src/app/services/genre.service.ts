@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class GenreService {
 
-  private baseUrl: string = "http://localhost:5199/api/Genres/";
+  private baseUrl: string = "http://localhost:5199/api/Genres/getallgenres";
 
   constructor(private http: HttpClient) {}
 
   private movies: Genre[] = [];
 
-  getMovies() : Observable<Genre[]> {
-      return this.http.get<Genre[]>(`${this.baseUrl}`);
+  getGenres() : Observable<string[]> {
+      return this.http.get<string[]>(`${this.baseUrl}`);
     }
 }

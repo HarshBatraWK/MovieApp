@@ -13,8 +13,8 @@
       </p>
     </div>
   </div>
-  
-  <app-moviesection genre="Action" />
-  <app-moviesection genre="Thriller" />
-  <app-moviesection genre="Sci-Fi" />
+
+  @for (genre of genres; track $index) {
+    <app-moviesection [genre]="genre" />
+  }
   

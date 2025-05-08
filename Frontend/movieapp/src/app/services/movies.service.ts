@@ -80,7 +80,7 @@ export class MoviesService {
   // ];
 
   getMoviesByGenre(genre: string) {
-    return this.http.get<Movie[]>(`${this.baseUrl}/byGenre/${genre}`);
+    return this.http.get<Movie[]>(`${this.baseUrl}byGenre/${genre}`);
   }
 
   getMovies() : Observable<Movie[]> {

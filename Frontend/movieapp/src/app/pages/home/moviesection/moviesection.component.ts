@@ -20,10 +20,8 @@ export class MoviesectionComponent implements OnInit {
       constructor(private _moviesservice: MoviesService) {}
   
       ngOnInit(): void {
-        this._moviesservice.getMovies().subscribe(data => {
-        // this._moviesservice.getMoviesByGenre(this.genre).subscribe(data => {
+        this._moviesservice.getMoviesByGenre(this.genre).subscribe(data => {
             this.movies = data;
-          console.log(this.movies);
         });        
       }
 

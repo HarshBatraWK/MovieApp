@@ -23,6 +23,17 @@ namespace WebApplication1.Controllers
             return await _context.Genres.ToListAsync();
         }
 
+        // GET: api/Genres/distinct
+        [HttpGet("getallgenres")]
+        public async Task<ActionResult<IEnumerable<string>>> GetDistinctGenreNames()
+        {
+            return await _context.Genres
+                                 .Select(g => g.Name)
+                                 .Distinct()
+                                 .ToListAsync();
+        }
+
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Genre>> GetGenre(int id)
