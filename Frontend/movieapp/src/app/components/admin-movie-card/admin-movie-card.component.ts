@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { AddMoviesService } from '../../services/add-movies.service';
 
 @Component({
   selector: 'app-admin-movie-card',
@@ -11,14 +12,24 @@ export class AdminMovieCardComponent {
 
   @Input() movie: any;
 
+  constructor(private addMovieService:AddMoviesService){}
+
   onUpdate(id: number) {
     console.log('Update movie:', id);
     // Add routing or update logic
   }
 
-  onDelete(id: number) {
-    console.log('Delete movie:', id);
-    // Add delete logic
+  onDelete(id: string): void {
+    // Calling deleteMovie method from the service
+    this.addMovieService.deleteMovie(id).subscribe({
+      next: (res) => {
+        console.log(`Movie with ID: ${id} deleted successfully`, res);
+        // Optionally, you can refresh or update your UI here
+      },
+      error: (err) => {
+        console.error(`Failed to delete movie with ID: ${id}`, err);
+      },
+    });
   }
 
 }

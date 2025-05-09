@@ -1,72 +1,150 @@
 <div class="form-container">
-    <h2>Add Movie</h2>
-    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
-      <!-- Title -->
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input id="title" formControlName="title" type="text" class="form-input" placeholder="Enter movie title" />
-        <div *ngIf="movieForm.get('title')?.invalid && movieForm.get('title')?.touched" class="error">
-          Title is required and cannot exceed 100 characters.
-        </div>
+  <h2>Add Movie</h2>
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        formControlName="title"
+        type="text"
+        class="form-input"
+        placeholder="Enter movie title"
+      />
+      <div
+        *ngIf="
+          movieForm.get('title')?.invalid && movieForm.get('title')?.touched
+        "
+        class="error"
+      >
+        Title is required and cannot exceed 100 characters.
       </div>
-  
-      <!-- Description -->
-      <div class="form-group">
-        <label for="description">Description</label>
-        <textarea id="description" formControlName="description" class="form-input" placeholder="Enter movie description"></textarea>
-        <div *ngIf="movieForm.get('description')?.invalid && movieForm.get('description')?.touched" class="error">
-          Description is required and cannot exceed 250 characters.
-        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        class="form-input"
+        placeholder="Enter movie description"
+      ></textarea>
+      <div
+        *ngIf="
+          movieForm.get('description')?.invalid &&
+          movieForm.get('description')?.touched
+        "
+        class="error"
+      >
+        Description is required and cannot exceed 250 characters.
       </div>
-  
-      <!-- Release Date -->
-      <div class="form-group">
-        <label for="releaseDate">Release Date</label>
-        <input id="releaseDate" formControlName="releaseDate" type="date" class="form-input" />
-        <div *ngIf="movieForm.get('releaseDate')?.invalid && movieForm.get('releaseDate')?.touched" class="error">
-          Release Date is required.
-        </div>
+    </div>
+
+    <!-- Release Date -->
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input
+        id="releaseDate"
+        formControlName="releaseDate"
+        type="date"
+        class="form-input"
+      />
+      <div
+        *ngIf="
+          movieForm.get('releaseDate')?.invalid &&
+          movieForm.get('releaseDate')?.touched
+        "
+        class="error"
+      >
+        Release Date is required.
       </div>
-  
-      <!-- Duration -->
-      <div class="form-group">
-        <label for="duration">Duration (minutes)</label>
-        <input id="duration" formControlName="duration" type="number" class="form-input" placeholder="Enter duration" />
-        <div *ngIf="movieForm.get('duration')?.invalid && movieForm.get('duration')?.touched" class="error">
-          Duration must be a positive number.
-        </div>
+    </div>
+
+    <!-- Duration -->
+    <div class="form-group">
+      <label for="duration">Duration (minutes)</label>
+      <input
+        id="duration"
+        formControlName="duration"
+        type="number"
+        class="form-input"
+        placeholder="Enter duration"
+      />
+      <div
+        *ngIf="
+          movieForm.get('duration')?.invalid &&
+          movieForm.get('duration')?.touched
+        "
+        class="error"
+      >
+        Duration must be a positive number.
       </div>
-  
-      <!-- Rating -->
-      <div class="form-group">
-        <label for="rating">Rating</label>
-        <input id="rating" formControlName="rating" type="number" class="form-input" placeholder="Enter rating (1-5)" />
-        <div *ngIf="movieForm.get('rating')?.invalid && movieForm.get('rating')?.touched" class="error">
-          Rating must be between 1 and 5.
-        </div>
+    </div>
+
+    <!-- Rating -->
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input
+        id="rating"
+        formControlName="rating"
+        type="number"
+        class="form-input"
+        placeholder="Enter rating (1-5)"
+      />
+      <div
+        *ngIf="
+          movieForm.get('rating')?.invalid && movieForm.get('rating')?.touched
+        "
+        class="error"
+      >
+        Rating must be between 1 and 5.
       </div>
-  
-      <!-- Image URL -->
-      <div class="form-group">
-        <label for="imageUrl">Image URL</label>
-        <input id="imageUrl" formControlName="imageUrl" type="url" class="form-input" placeholder="Enter image URL" />
-        <div *ngIf="movieForm.get('imageUrl')?.invalid && movieForm.get('imageUrl')?.touched" class="error">
-          Valid image URL is required.
-        </div>
-      </div>
-  
-      <!-- Video URL -->
-      <div class="form-group">
-        <label for="videoUrl">Video URL</label>
-        <input id="videoUrl" formControlName="videoUrl" type="url" class="form-input" placeholder="Enter video URL" />
-        <div *ngIf="movieForm.get('videoUrl')?.invalid && movieForm.get('videoUrl')?.touched" class="error">
-          Valid video URL is required.
-        </div>
-      </div>
-  
-      <!-- Submit Button -->
-      <button type="submit" class="submit-btn" [disabled]="movieForm.invalid">Submit</button>
-    </form>
-    <button class="submit-btn" routerLink="/admin" style="color: white; text-align: center;display: block; margin-top: 0.5rem;">Home</button>
-  </div>
-  
+    </div>
+
+    <!-- Genre -->
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select id="genre" formControlName="genres" class="form-input" multiple>
+        <option value="" disabled>Select Genre(s)</option>
+        <option *ngFor="let genre of genreArray" [value]="genre">
+          {{ genre }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Image File Upload -->
+    <div class="form-group">
+      <label for="imageFile">Upload Image</label>
+      <input
+        id="imageFile"
+        type="file"
+        class="form-input"
+        (change)="onFileSelect($event, 'image')"
+      />
+    </div>
+
+    <!-- Video File Upload -->
+    <div class="form-group">
+      <label for="videoFile">Upload Video</label>
+      <input
+        id="videoFile"
+        type="file"
+        class="form-input"
+        (change)="onFileSelect($event, 'video')"
+      />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-btn" [disabled]="movieForm.invalid">
+      Submit
+    </button>
+  </form>
+  <button
+    class="submit-btn"
+    routerLink="/admin"
+    style="color: white; text-align: center; display: block; margin-top: 0.5rem"
+  >
+    Home
+  </button>
+</div>

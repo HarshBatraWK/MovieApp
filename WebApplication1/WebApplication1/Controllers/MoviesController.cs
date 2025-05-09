@@ -249,7 +249,7 @@ namespace WebApplication1.Controllers
         }
 
 
-        [HttpPost("uploadData/{isImage}")]
+        [HttpPost("uploadData/{isImage}")]  
         public async Task<IActionResult> UploadImage(IFormFile file, bool isImage)
         {
             if (file == null || file.Length == 0)

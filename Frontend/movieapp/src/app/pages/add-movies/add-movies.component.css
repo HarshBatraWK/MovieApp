@@ -6,6 +6,7 @@
     background-color: #141414;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    scrollbar-width: none;
   }
   
   h2 {
@@ -67,3 +68,6 @@
     background-color: #b81d2d;
   }
   
+  option{
+    color: white;
+  }
