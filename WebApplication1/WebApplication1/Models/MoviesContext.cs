@@ -14,7 +14,7 @@ namespace WebApplication1.Models.Movie
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=IN83TAAL072K73\\SQLEXPRESS;Database=moviesdb;Trusted_Connection=true;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=IN83TAAL072K4M\\SQLEXPRESS;Database=moviesdb;Trusted_Connection=true;TrustServerCertificate=True;");
             }
         }
 

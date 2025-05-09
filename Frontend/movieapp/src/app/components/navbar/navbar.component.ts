@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  isLoggedIn = false;
-  userName: string | null = null;
+  public isLoggedIn = false;
+  public userName: string | null = null;
   private loginStatusSubscription?: Subscription;
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.authService.logout();         // Clears token + emits false
     this.userName = null;              // Clear user name
     this.isLoggedIn = false;           // Optional: for immediate visual feedback
-    this.router.navigate(['/login']);  // ✅ Redirect to login page
+    this.router.navigate(['/login']);  // Redirect to login page
   }
   
 }

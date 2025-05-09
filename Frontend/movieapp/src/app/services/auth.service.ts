@@ -38,6 +38,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('jwt_token');
+      this.loggedInSubject.next(false); // Notify subscribers that the user has logged out
   }
 
   isLoggedIn(): boolean {

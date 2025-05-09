@@ -31,7 +31,7 @@ export class LoginComponent {
   }
 
   // Getters for easier access to form controls
-  get email() {
+  get email () {
     return this.loginForm.get('email');
   }
 
@@ -45,7 +45,11 @@ export class LoginComponent {
       this.loginService.login(this.loginForm.value).subscribe({
         next: (token: string) => {
           localStorage.setItem('jwt_token', token);
-          this.router.navigate(['/']);
+          if (this.email?.value == "admin@admin.com" && this.password?.value == "admin1234") {
+            this.router.navigate(['/admin']);
+          } else {
+            this.router.navigate(['/']);
+          }
         },
         error: (err) => {
           console.error('Login failed', err);

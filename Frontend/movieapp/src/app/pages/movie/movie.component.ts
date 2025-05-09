@@ -23,10 +23,10 @@ export class MovieComponent implements OnInit {
     const idParam = this.route.snapshot.paramMap.get('id');
     const id = idParam ? +idParam : 0; // Convert string to number, fallback to 0 if null
 
-    console.log(this.route.snapshot.paramMap);
+    // console.log(this.route.snapshot.paramMap);
     this.moviesService.getMoviesById(id).subscribe(movie => {
       this.movie = movie;
-      console.log(movie);
+      // console.log(movie);
     });
   }
 

@@ -3,7 +3,8 @@ import { AdminMovieCardComponent } from "../../components/admin-movie-card/admin
 import { Movie } from '../../models/Movie';
 import { MoviesService } from '../../services/movies.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,12 +15,17 @@ import { RouterModule } from '@angular/router';
 export class AdminComponent {
   movies: Movie []= [];
     
-        constructor(private _moviesservice: MoviesService) {}
+        constructor(private _moviesservice: MoviesService, private authservice: AuthService, private router: Router) {}
     
         ngOnInit(): void {
           this._moviesservice.getMovies().subscribe(data => {
             this.movies = data;
-            console.log(this.movies);
+            // console.log(this.movies);
           });        
+        }
+
+        logout(): void {
+          this.authservice.logout();         // Clears token + emits false
+          this.router.navigate(['/login']);  // Redirect to login page
         }
 }
