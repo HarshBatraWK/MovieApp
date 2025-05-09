@@ -15,15 +15,21 @@ import { Movie } from '../../../models/Movie';
 export class MoviesectionComponent implements OnInit {
   @Input() genre: string = "";
 
-  movies: Movie []= [];
-  
-      constructor(private _moviesservice: MoviesService) {}
-  
-      ngOnInit(): void {
-        this._moviesservice.getMoviesByGenre(this.genre).subscribe(data => {
-            this.movies = data;
-        });        
-      }
+  movies: Movie[] = [];
+
+  constructor(private _moviesservice: MoviesService) { }
+
+  ngOnInit(): void {
+    if (this.genre == "All Movies") {
+      this._moviesservice.getMovies().subscribe(data => {
+        this.movies = data;
+      });
+    } else {
+      this._moviesservice.getMoviesByGenre(this.genre).subscribe(data => {
+        this.movies = data;
+      });
+    }
+  }
 
 
 }
